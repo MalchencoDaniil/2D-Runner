@@ -39,6 +39,11 @@ public class EnemyController : MonoBehaviour
     {
         AnimationState();
         EnemyMove();
+
+        if (GameManager.instance.loose)
+        {
+            enemyState = EnemyState.Win;
+        }
     }
 
     private void EnemyMove()
